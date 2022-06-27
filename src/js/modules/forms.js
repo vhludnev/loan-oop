@@ -1,13 +1,12 @@
 export default class Form {
     constructor(forms) {
         this.forms = document.querySelectorAll(forms);
-        //this.inputs = document.querySelectorAll('input');
         this.message = {
-            loading: 'Загрузка...',
-            success: 'Спасибо! Скоро мы с вами свяжемся!',
-            failure: 'Что-то пошло не так...'
+            loading: 'Loading...',
+            success: 'Thank you! We will contact you soon!',
+            failure: 'Something went wrong...'
         };
-        this.path = 'assets/question.php'; // where request is being sent
+        this.path = 'assets/question.php';
     }
 
     async postData(url, data) {
@@ -20,9 +19,6 @@ export default class Form {
     }
 
     init() {
-        //this.checkMailInputs();
-        //this.initMask();
-
         this.forms.forEach(item => {
             item.addEventListener('submit', (e) => {
                 e.preventDefault();

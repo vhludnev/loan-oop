@@ -54,10 +54,24 @@ export default class MainSlider extends Slider {
 
         document.querySelectorAll('.prevmodule').forEach(item => {
             item.addEventListener('click', () => this.plusSlides(-1))
-        })
-        // document.querySelectorAll('.nextmodule').forEach(item => {
-        //     item.addEventListener('click', () => this.plusSlides(1))
-        // })
+        });
+
+        document.querySelectorAll('.btn.menu__block-schedule').forEach((item, idx) => {
+            item.addEventListener('click', () => {
+                if (window.location.pathname.includes('modules.html')) {
+                    window.location.href = "/appointment.html"
+                }
+                this.plusSlides(5-idx)
+            })
+        });
+
+        document.querySelectorAll('.sidecontrol > a').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.location.pathname.includes('modules.html')) {
+                    window.location.href = "/"
+                }
+            })
+        });
     }
 
     render() {

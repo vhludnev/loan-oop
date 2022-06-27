@@ -107,20 +107,23 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
+}
+.menu__block a:hover{
+    color:#fff;
 }
 .menu__block-schedule {
     font-size: 11px;
     font-weight: 700;
     margin-right: 40px;
     letter-spacing: 1.78px;
+    color: #fff;
+    background-color: #9ec73d;
+    text-transform: uppercase;
 }
 .menu__block svg {
     width: 22px;
     height: 22px;
-}
-.menu__block-schedule {
-    color: #fff;
-    background-color: #9ec73d;
 }
 .sidecontrol {
     position: absolute;
@@ -360,6 +363,9 @@ a:active {
 .showup__content-slider {
     position: relative;
     width: 860px;
+}
+.showup__content-slider a {
+    pointer-events: none;
 }
 .showup__content-slider .slick-prev {
     position: absolute;
